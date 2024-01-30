@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <title>Fitness TigraNa</title>
+</head>
+<body>
+    <header class="header">
+            <div class="header__wrap">
+                <div class="header__logo">
+                    <img src="icons/logo.svg" alt="TigraNa" />
+                </div>
+                <nav class="header__menu">
+                    <ul class="menu-list">
+                        <li class="menu-item">
+                            <a href="#course">Кому подойдёт</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#info">О курсе</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#results">Результат</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#contra">Противопоказания</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#author">Тренер</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header__burger-icon">
+                    <button class="burger-icon">☰</button>
+                </div>
+            </div>
+    </header>
+    <main>
+        <section class="first-page">
+            <div class="container">
+                <div class="first-page__wrap">
+                    <div class="first-page__info">
+                        <p>Онлайн-формат</p>
+                    </div>
+                    <div class="first-page__title">
+                        <h1>Стройность после родов</h1>
+                    </div>
+                    <div class="first-page__extra-info">
+                        <p>
+                            Длительность 4 недели <br />
+                            С доступом на 3 месяца
+                        </p>
+                    </div>
+                    <div class="first-page__guide">
+                        <p>В подарок гайд <br> «Первый шаг»</p>
+                    </div>
+                    
+                    <div class="first-page__action">
+                    <div class=" first-page__button">
+                        <button>Открыть путь</button>
+                    </div>
+                    <p>
+                        Один клик, и ты найдешь СВОЙ путь к телу мечты
+                    </p>
+                    </div>
+                </div>
+            </div>
+            <div class="first-page__picture">
+                <div class="picture-author">
+                    <picture class="picture object-fit-cover">
+                        <source srcset="images/main_photo.avif, images/main_photo@2x.avif 2x" type="image/avif">
+                        <source srcset="images/main_photo.webp, images/main_photo@2x.webp 2x" type="image/webp">
+                        <img src="images/main_photo.png" srcset="images/main_photo.png, images/main_photo@2x.png 2x" alt="main photo">
+                    </picture>
+                </div>
+                <div class="picture-diamond">
+                    <picture class="picture object-fit-cover">
+                        <source srcset="images/Diamond.avif, images/Diamond@2x.avif 2x" type="image/avif">
+                        <source srcset="images/Diamond.webp, images/Diamond@2x.webp 2x" type="image/webp">
+                        <img src="images/Diamond.png" srcset="images/Diamond.png, images/Diamond@2x.png 2x" alt="Diamond">
+                    </picture>
+                </div>
+            </div>
+        </section>
+        <section class="question pt-160 pb-160">
+            <div class="container">
+                <div class="question__title section-title">
+                    <h2>С момента родов уже прошло 6 месяцев?</h2>
+                </div>
+                <div class="question__wrap">
+                    <div class="question__buttons">
+                        <button id="yes" class="main-button">Да</button>
+                        <button id="no" class="main-button">Нет</button>
+                    </div>
+                </div>
+            </div>
+            <div class="overlay">
+                <div class="popup">
+                    <div class="popup-close">&times;</div>
+                    <div class="popup-title"></div>
+                </div>
+            </div>
+        </section>
+        <div class="booking">
+            <div class="container">
+                <div class="booking__background">
+                    <picture class="picture object-fit-cover">
+                        <source srcset="images/background_promo.avif, images/background_promo@2x.avif 2x" type="image/avif">
+                        <source srcset="images/background_promo.webp, images/background_promo@2x.webp 2x" type="image/webp">
+                        <img src="images/background_promo.jpg" srcset="images/background_promo.jpg, images/background_promo@2x.jpg 2x" alt="background">
+                    </picture>
+                </div>
+                <div class="booking__wrap">
+                    <div class="booking__title">
+                        <p>Ты можешь забронировать место на курсе сейчас,
+                            а к занятиям приступить через полгода после родов</p>
+                    </div>
+                    <div class="booking__button">
+                        <button class="main-button">
+                            бронирую!
+                        </button>
+                    </div>
+                    <div class="booking__info">
+                        <p>В подарок гайд «Первый шаг»</p>
+                    </div>
+                </div>
+                <div class="booking__img">
+                    <picture class="picture object-fit-cover">
+                        <source srcset="images/promo_author.avif, images/promo_author@2x.avif 2x" type="image/avif">
+                        <source srcset="images/promo_author.webp, images/promo_author@2x.webp 2x" type="image/webp">
+                        <img src="images/promo_author.png" srcset="images/promo_author.png, images/promo_author@2x.png 2x" alt="author">
+                    </picture>
+                </div>
+            </div>
+        </div>
+        <section class="course pt-160 pb-160" id="course">
+            <div class="container">
+                <div class="course__title section-title">
+                    <h2>Этот курс для женщин, которые хотят:</h2>
+                </div>
+                <div class="course__wrap">
+                    <div class="course__items">
+                    <div class="course__item ">
+                        <p>Тренироваться по 15-30 минут в день, но не знают с чего начать</p>
+                    </div>
+                    <div class="course__item">
+                        <p>
+                        Забыть про голодовки и вкусно питаться без последствий в виде лишних кг
+                        </p>
+                    </div>
+                    <div class="course__item">
+                        <p>
+                        Ходить на пляж в красивом купальнике без стеснения
+                        </p>
+                    </div>
+                    <div class="course__item">
+                        <p>
+                        Привлекать мужа и после родов, чтобы не распускал слюни на других
+                        </p>
+                    </div>
+                    <div class="course__item">
+                        <p>
+                        Получить долговременный результат и забыть про «КАЧЕЛИ» веса
+                        </p>
+                    </div>
+                    <div class="course__item">
+                        <p>
+                        Почувствовать легкость, улучшить общее самочувствие и сделать фигуру привлекательнее
+                        </p>
+                    </div>
+                    </div>
+                    <div class="course__motivation">
+                        <p>СУДЬБА – СУДЬБОЙ, НО ВЫБОР ЗА ТОБОЙ!</p>
+                    </div>
+                    <div class="course__images">
+                        <picture class="picture object-fit-cover">
+                            <source srcset="images/types.avif, images/types@2x.avif 2x" type="image/avif">
+                            <source srcset="images/types.webp, images/types@2x.webp 2x" type="image/webp">
+                            <img src="images/types.png" srcset="images/types.png, images/types@2x.png 2x" alt="types">
+                        </picture>
+                    </div>
+                    <div class="course__button">
+                        <button class="main-button">ГОТОВА НАЧАТЬ!</button>
+                    </div>
+        </section>
+        <section class="info pb-160" id="info">
+            <div class="container">
+                <div class="info__title section-title">
+                    <h2>Что вас ждет на курсе:</h2>
+                </div>
+                <div class="info__wrap">
+                    <div class="info__left">
+                        <div class="left-title">
+                            <p>20 ТРЕНИРОВОК по 15-30 минут:</p>
+                        </div>
+                        <ul>
+                            <li>Лучшие упражнения без ущерба для коленей, вен, спины и суставов</li>
+                            <li>Проверка техники выполнения упражнений с обратной связью от Натальи</li>
+                            <li>Разбор КБЖУ в легкой и доступной форме</li>
+                            <li>Замеры каждую неделю и проверка отчетов питания</li>
+                            <li>Полезные гайды по возвращению любви к своему телу</li>
+                            <li>Ежедневные ответы от Натальи на ваши вопросы в WA/Telegram</li>
+                        </ul>
+                    </div>
+                    <div class="info__right">
+                        <div class="right-title">
+                            <p>На курсе не будет:</p>
+                        </div>
+                        <ul>
+                            <li>Срывов</li>
+                            <li>Диет</li>
+                            <li>Многочасовых тренировок</li>
+                            <li>Волшебных пилюль</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="info__button">
+                    <button class="main-button">стартую!</button>
+                </div>
+            </div>
+        </section>
+        <section class="results pb-160" id="results">
+            <div class="container">
+                <div class="results__title section-title">
+                    <h2>Результаты после курса:</h2>
+                </div>
+                <div class="results__wrap">
+                    <div class="results__textBlocks">
+                        <div class="results__textBlock1">
+                            <div class="results__block">
+                                <p>Станете меньше обращаться к врачам и бегать по аптекам</p>
+                                <img class="arrow" src="icons/line1.svg" alt="Arrow 1" />
+                            </div>
+                            <div class="results__block">
+                                <p>
+                                    Станете привлекательнее, сексуальнее, появится уверенность в себе,
+                                    и научитесь любить не только ребенка и мужа, но и себя
+                                </p>
+                                <img class="arrow" src="icons/line2.svg" alt="Arrow 2" />
+                            </div>
+                            <div class="results__block">
+                                <p>Качество тела заметно улучшится</p>
+                                <img class="arrow" src="icons/line3.svg" alt="Arrow 3" />
+                            </div>
+                        </div>
+                        <div class="results__image">
+                            <picture class="picture object-fit-cover">
+                                <source srcset="images/results_photo.avif, images/results_photo@2x.avif 2x" type="image/avif">
+                                <source srcset="images/results_photo.webp, images/results_photo@2x.webp 2x" type="image/webp">
+                                <img src="images/results_photo.png" srcset="images/results_photo.png, images/results_photo@2x.jpg 2x" alt="results_photo">
+                            </picture>
+                        </div>
+                        <div class="results__textBlock2">
+                            <div class="results__block">
+                                <img class="arrow" src="icons/line4.svg" alt="Arrow 4" />
+                                <p>Перестанете сидеть на диетах</p>
+                            </div>
+                            <div class="results__block">
+                                <img class="arrow" src="icons/line5.svg" alt="Arrow 5" />
+                                <p>
+                                Появится энергия и интерес к жизни, а также, вы погрузитесь в
+                                хорошее настроение даже в условиях недосыпа
+                                </p>
+                            </div>
+                            <div class="results__block">
+                                <img class="arrow" src="icons/line6.svg" alt="Arrow 6" />
+                                <p>
+                                Научитесь составлять полезный рацион без удара по кошельку
+                                </p>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="results__motivation">
+                            <p>
+                                Если бы вы начали заниматься спортом хотя бы год назад, то уже сегодня
+                                могли бы стать объектом зависти и даже подражания для других, а также
+                                настоящим искушением для второй половинки!
+                            </p>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        <section class="countdown pb-160">
+            <div class="container">
+                <div class="countdown__title section-title">
+                    <h2>До повышения цен осталось:</h2>
+                </div>
+                <div class="countdown__wrap">
+                    <div class="countdown__items">
+                      <div class="countdown__item">
+                        <span id="days"></span>
+                        <span class="name days_span">Дни</span>
+                      </div>
+                      <div class="countdown__item">
+                        <span id="hours"></span>
+                        <span class="name">часы</span>
+                      </div>
+                      <div class="countdown__item">
+                        <span id="minutes"></span>
+                        <span class="name">минуты</span>
+                      </div>
+                      <div class="countdown__item">
+                        <span id="seconds"></span>
+                        <span class="name">секунды</span>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </section>
+        <section class="contra pb-160" id="contra">
+            <div class="container">
+                <div class="contra__title section-title">
+                    <h2>Противопоказания:</h2>
+                </div>
+                <div class="contra__wrap">
+                  <div class="contra__block1">
+                    <ul class="contra__list">
+                      <li>Острые воспалительные процессы</li>
+                      <li>Нет допуска к физической активности от врача</li>
+                      <li>Опущение органов малого таза</li>
+                      <li>Беременность</li>
+                    </ul>
+                  </div>
+                  <div class="contra__block2"></div>
+                  <ul class="contra__list">
+                    <li>Давность родов менее 6 месяцев</li>
+                    <li>Остеопороз</li>
+                    <li>Онкологические заболевания</li>
+                    <li>Диастаз более 3 см</li>
+                  </ul>
+                </div>
+            </div>
+        </section>
+        <section id="author" class="author pb-160">
+            <div class="container">
+                <div class="author__wrap">
+                    <div class="author__info">
+                        <div class="author__info-about">
+                            <div class="author__title section-title">
+                                <h2>Автор курса — Наталья</h2>
+                            </div>
+                            <div class="author__name">
+                                <p>она же TigraNa</p>
+                            </div>
+                            <div class="author__info-info">
+                                <h3>Поможет открыть путь к созданию фигуры мечты</h3>
+                                <p>
+                                    Имеет 4 красных диплома, а это значит, что она с лёгкостью
+                                    покоряет любые вершины. Окончила Федеральную школу фитнес-тренеров
+                                    и получила диплом о профессиональной переподготовке с присвоением
+                                    квалификации «Тренер-преподаватель». Диплом даёт право на ведение
+                                    профессиональной деятельности в сфере физической культуры и
+                                    спорта.
+                                </p>
+                            </div>
+                            <div class="author__info-study">
+                                <picture class="picture object-fit-cover">
+                                    <source srcset="images/diploma1.avif" type="image/avif">
+                                    <source srcset="images/diploma1.webp" type="image/webp">
+                                    <img src="images/diploma1.png" srcset="images/diploma1.png" alt="Diploma">
+                                </picture>
+                                <picture class="picture object-fit-cover">
+                                    <source srcset="images/diploma2.avif" type="image/avif">
+                                    <source srcset="images/diploma2.webp" type="image/webp">
+                                    <img src="images/diploma2.png" srcset="images/diploma2.png" alt="Diploma">
+                                </picture>
+                                <picture class="picture object-fit-cover">
+                                    <source srcset="images/diploma3.avif" type="image/avif">
+                                    <source srcset="images/diploma3.webp" type="image/webp">
+                                    <img src="images/diploma3.png" srcset="images/diploma3.png" alt="Diploma">
+                                </picture>
+                                <picture class="picture object-fit-cover">
+                                    <source srcset="images/Diploma.avif" type="image/avif">
+                                    <source srcset="images/Diploma.webp" type="image/webp">
+                                    <img src="images/Diploma.png" srcset="images/Diploma.png" alt="Diploma">
+                                </picture>
+                            </div>
+                        </div>
+                        <div class="author__info-img">
+                            <div class="author__info-image">
+                                <picture class="picture object-fit-cover">
+                                    <source srcset="images/author.avif, images/author@2x.avif 2x" type="image/avif">
+                                    <source srcset="images/author.webp, images/author@2x.webp 2x" type="image/webp">
+                                    <img src="images/author.png" srcset="images/author.png, images/author@2x.png 2x" alt="author">
+                                </picture>
+                        </div>
+                        <div class="author__info-text">
+                            <p>
+                                В спорте с 6 лет, профессионально занималась спортивной
+                                гимнастикой и потом ушла в фитнес, опыт более 10 лет. Мама, чья
+                                практика показывает, что ребёнок не помеха на пути к стройности.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+        <section class="slogan pb-160">
+            <div class="container">
+                <div class="slogan__title section-title">
+                    <h2>
+                        Количество мест ограничено!<br />
+                        Успей купить курс СЕГОДНЯ со скидкой
+                    </h2>
+                </div>
+                <div class="slogan__wrap">
+                    <div class="slogan__text">
+                        <p>На курсе очень комфортно, жду вас за результатом!</p>
+                    </div>
+                    <div class="slogan__button">
+                        <button class="main-button">ХОЧУ НА КУРС</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__logo">
+                    <a href="index.html"><img src="icons/logo.svg" alt="logo" /></a>
+                </div>
+                <div class="footer__info">
+                    <div class="footer__info-copyright">
+                        <p>© 2024 Все права защищены</p>
+                    </div>
+                    <div class="footer__info-social">
+                        <a href="https://instagram.com/tigra_na.sport">
+                            <svg class="social-icon">
+                            <use xlink:href="/icons/sprite/sprite.svg#instagram"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="footer__info-agreement">
+                        <p>Пользовательское соглашение</p>
+                    </div>
+                  </div>
+            </div>
+            
+        </footer>
+    </main>
+    <script src="js/main.min.js"></script>
+</body>
+</html>
