@@ -3,14 +3,14 @@ const browserSync = require('browser-sync').create();
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify-es').default;
 const scss = require('gulp-sass')(require('sass'));
-
+const  ghPages  = require ('gulp-gh-pages');
 const autoprefixer = require('gulp-autoprefixer');
 //const clean = require('gulp-clean');
 const cleanCSS = require('gulp-clean-css');
 const avif = require('gulp-avif');
 const webp = require('gulp-webp');
 const imagemin = require('gulp-imagemin');
-const newer = require('gulp-newer');
+//const newer = require('gulp-newer');
 const fonter =require('gulp-fonter');
 const ttf2woff2 = require('gulp-ttf2woff2');
 const svgSprite = require('gulp-svg-sprite');
@@ -125,6 +125,10 @@ function watching(){
     //watch("src/img/**/*.{png,jpg,jpeg}", parallel(webpImages));
 };
 
+function deploy() {
+    return src('./dist/**/*')
+        .pipe(ghPages());
+}
 /*function cleanDist(){
     return src('dist')
         .pipe(clean())
@@ -155,6 +159,7 @@ exports.html = html;
 exports.icons = icons;
 exports.webpImages = webpImages;
 exports.avifImages = avifImages;
+exports.deploy = deploy;
 
 //exports.build = series(cleanDist, building);
 exports.default = parallel(styles, scripts, images, html, sprite, avifImages, webpImages, icons, fonts, watching);
