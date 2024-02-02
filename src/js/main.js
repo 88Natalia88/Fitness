@@ -1,3 +1,22 @@
+const pictures = document.querySelectorAll('.author__info-study picture');
+//console.log(pictures);
+pictures.forEach(picture => {
+  picture.addEventListener('click', event => {
+    if (picture.hasAttribute('style')) {
+      picture.removeAttribute('style');
+    } else {
+      picture.style.cssText = 'position: absolute; top: 0; left: 0;';
+    }
+    event.stopPropagation();
+  });
+});
+
+document.addEventListener('click', () => {
+  pictures.forEach(picture => {
+    picture.removeAttribute('style');
+  });
+});
+
 
 const yes = document.getElementById('yes');
 const no = document.getElementById('no');

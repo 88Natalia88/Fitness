@@ -1069,21 +1069,13 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        transition: transform 0.3s;
-        
-
-    }
-    &__info-study img:hover {
-        /*transform: scale(2.051, 2.057);
-        -webkit-transform: scale(1.2);
-        -moz-transform: scale(1.2);
-        -ms-transform: scale(1.2);
-        -o-transform: scale(1.2);
-        */
-        position: absolute;
-        top: 0;
-        left: 0;
+        transition: transform 0.8s ease-in-out;
+        -webkit-transition: transform 0.8s ease-in-out;
+        -moz-transition: transform 0.8s ease-in-out;
+        -ms-transition: transform 0.8s ease-in-out;
+        -o-transition: transform 0.8s ease-in-out;
 }
+    
 }
 
 .slogan{
