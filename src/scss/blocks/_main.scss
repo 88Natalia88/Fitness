@@ -5,6 +5,7 @@
     background-color: $main-color;
     position: relative;
     padding-bottom:  70px;
+    
     //display: flex;
     @include md{
         //min-height: 74vh;
@@ -14,13 +15,15 @@
         //height: 86.5vh;
     }
     @include xs{
-        height: 189vh;
+        //max-height: 189vh;
+        //height: 189vh;
+        overflow: auto;
         padding-bottom: 0;
         display: flex;
         flex-direction: column;
     }
     @include xxs{
-        height: 138vh;
+        //height: 138vh;
     }
     
     &__picture{
