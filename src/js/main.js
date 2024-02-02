@@ -1,3 +1,7 @@
+window.addEventListener('DOMContentLoaded', () => {
+  
+});
+
 const pictures = document.querySelectorAll('.author__info-study picture');
 //console.log(pictures);
 pictures.forEach(picture => {
