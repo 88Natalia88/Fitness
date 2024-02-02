@@ -20,7 +20,7 @@
         flex-direction: column;
     }
     @include xxs{
-        height: 131vh;
+        height: 138vh;
     }
     &__picture{
         //position: relative;
@@ -245,6 +245,7 @@
 }
 
 .question{
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -253,7 +254,11 @@
         margin-top: 21px;
         margin-bottom: 30px;
     }
+    &__wrap{
+        z-index: 1;
+    }
     &__title{
+        z-index: 1;
         text-align: center;
         @include xs{
             padding: 0 15%;
@@ -325,6 +330,15 @@
             margin: 0 auto;
             //text-align: center;
         }
+    .left-70{
+        @include sm{
+            transform: translateX(50%);
+            -webkit-transform: translateX(50%);
+            -moz-transform: translateX(50%);
+            -ms-transform: translateX(50%);
+            -o-transform: translateX(50%);
+        }
+    }
 }
 
 .booking{
@@ -422,7 +436,12 @@
 }
 
 .course{
+    position: relative;
+    &__wrap{
+        z-index: 1;
+    }
     &__title{
+        z-index: 1;
         text-align: center;
         margin-bottom: 100px;
         @include xs{
@@ -534,7 +553,9 @@
 }
 
 .info{
+    position: relative;
     &__title{
+        z-index: 1;
         text-align: center;
         margin-bottom: 100px;
         @include xs{
@@ -546,6 +567,7 @@
         }
     }
     &__wrap{
+        z-index: 1;
         display: flex;
         justify-content: space-between;
         margin-bottom: 100px;
@@ -631,10 +653,15 @@
 }
 
 .results{
+    position: relative;
     @include xxs{
         margin-top: 50px;
     }
+    &__wrap{
+        z-index: 1;
+    }
     &__title{
+        z-index: 1;
         text-align: center;
         margin-bottom: 100px;
         @include xxs{
@@ -826,10 +853,12 @@
     }
 }
 .countdown{
+    position: relative;
     @include xxs{
         margin-top: 30px;
     }
     &__wrap{
+        z-index: 1;
         width: 100%;
         max-width: 580px;
         margin: 0 auto;
@@ -877,10 +906,12 @@
 }
 
 .contra{
+    position: relative;
     @include xxs{
         margin-top: 40px;
     }
     &__title{
+        z-index: 1;
         text-align: center;
         margin-bottom: 100px;
         @include xxs{
@@ -888,6 +919,7 @@
         }
     }
     &__wrap{
+        z-index: 1;
         display: flex;
         justify-content: space-around;
         @include xxs{
@@ -912,8 +944,12 @@
 }
 
 .author{
+    position: relative;
     @include xxs{
         margin-top: 54px;
+    }
+    &__wrap{
+        z-index: 1;
     }
     &__title{
         margin-bottom: 10px;

@@ -24,6 +24,7 @@ body {
     min-height: 100vh;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
     &.locked {
         overflow: hidden
     }
@@ -186,16 +187,6 @@ a:focus:after {
     line-height: 138%;
     font-style: normal;
     font-weight: 500;
-    // @include md{
-    //     font-size: 75px;
-    //     line-height: 110%;
-    // }
-    // @include sm{
-    //     font-size: 60px;
-    // }
-    // @include xs{
-    //     font-size: 45px;
-    // }
     @include xxs{
         font-size: 14px;
     }
@@ -218,5 +209,133 @@ a:focus:after {
     }
     @include xxs{
         padding-top: 0;
+    }
+}
+.left-70{
+    transform: translateX(70%);
+    -webkit-transform: translateX(70%);
+    -moz-transform: translateX(70%);
+    -ms-transform: translateX(70%);
+    -o-transform: translateX(70%);
+    @include xs{
+        transform: translateX(50%);
+        -webkit-transform: translateX(50%);
+        -moz-transform: translateX(50%);
+        -ms-transform: translateX(50%);
+        -o-transform: translateX(50%);
+}
+}
+.right-70{
+    transform: translateX(-70%);
+    -webkit-transform: translateX(-70%);
+    -moz-transform: translateX(-70%);
+    -ms-transform: translateX(-70%);
+    -o-transform: translateX(-70%);
+}
+.left-80{
+    transform: translateX(80%);
+    -webkit-transform: translateX(80%);
+    -moz-transform: translateX(80%);
+    -ms-transform: translateX(80%);
+    -o-transform: translateX(80%);
+    @include xs{
+    transform: translateX(50%);
+    -webkit-transform: translateX(50%);
+    -moz-transform: translateX(50%);
+    -ms-transform: translateX(50%);
+    -o-transform: translateX(50%);
+}
+}
+.right-80{
+    transform: translateX(-80%);
+    -webkit-transform: translateX(-80%);
+    -moz-transform: translateX(-80%);
+    -ms-transform: translateX(-80%);
+    -o-transform: translateX(-80%);
+}
+.circle-pink{
+    position: absolute;
+    z-index: -1;
+    background: rgba(250, 217, 244, 0.6);
+    filter: blur(100px);
+}
+.circle-blue{
+    position: absolute;
+    z-index: -1;
+    background: rgba(204, 215, 249, 0.6);
+    filter: blur(100px);
+    }
+.circle-yellow{
+    position: absolute;
+    z-index: -1;
+    filter: blur(100px);
+    background: rgba(243, 245, 198, 0.8);
+}
+
+.w-663{
+    width: 50vw;
+    height: 50vw;
+    max-width: 663px;
+    max-height: 663px;
+    @include sm{
+        max-width: 600px;
+        max-height: 600px;
+    }
+    @include xxs{
+        max-width: 345px;
+        max-height: 345px;
+    }
+}
+
+.w-550{
+    width: 50vw;
+    height: 50vw;
+    max-width: 550px;
+    max-height: 550px;
+    @include xxs{
+        max-width: 345px;
+        max-height: 345px;
+    }
+}
+.w-993{
+    width: 50vw;
+    height: 50vw;
+    max-width: 993px;
+    max-height: 993px;
+    @include sm{
+        max-width: 600px;
+        max-height: 600px;
+    }
+    @include xxs{
+        max-width: 345px;
+        max-height: 345px;
+    }
+}
+.w-836{
+    width: 50vw;
+    height: 50vw;
+    max-width: 836px;
+    max-height: 836px;
+    @include sm{
+        max-width: 600px;
+        max-height: 600px;
+    }
+    @include xxs{
+        max-width: 345px;
+        max-height: 345px;
+    }
+}
+.w-720{
+    width: 50vw;
+    height: 50vw;
+    max-width: 720px;
+    max-height: 720px;
+    @include sm{
+        max-height: 600px;
+        max-width: 600px;
+    }
+    @include xxs{
+        max-width: 345px;
+        max-height: 345px;
     }
 }
