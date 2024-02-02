@@ -1047,11 +1047,15 @@
     }
     &__info-study {
         margin-top: 60px;
+        //width: 555px;
+        //height: 395px;
         display: grid;
         grid-template-columns: 272px 272px;
-        grid-template-rows: 192px 192px;
+        grid-template-rows: minmax(192px, auto);
         grid-column-gap: 11px;
         grid-row-gap: 11px;
+        position: relative;
+        //overflow: hidden;
         @include xs{
             justify-content: center;
         }
@@ -1066,14 +1070,20 @@
         height: 100%;
         object-fit: cover;
         transition: transform 0.3s;
+        
+
     }
     &__info-study img:hover {
-        transform: scale(2.051, 2.057);
-        -webkit-transform: scale(2.051, 2.057);
-        -moz-transform: scale(2.051, 2.057);
-        -ms-transform: scale(2.051, 2.057);
-        -o-transform: scale(2.051, 2.057);
-    }
+        /*transform: scale(2.051, 2.057);
+        -webkit-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        -o-transform: scale(1.2);
+        */
+        position: absolute;
+        top: 0;
+        left: 0;
+}
 }
 
 .slogan{
