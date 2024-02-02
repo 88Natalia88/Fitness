@@ -1,0 +1,76 @@
+.footer {
+    height: 280px;
+    background-color: $main-color;
+    color: $light-color;
+    a:hover:after{
+        width: 0;
+    }
+    @include xs{
+        height: 427px;
+    }
+    @include xxs{
+        height: 97px;
+    }
+    &__logo {
+        text-align: center;
+        img {
+            margin-top: 90px;
+            @include xxs{
+                width: 57px;
+                height: 17px;
+                margin-top: 15px;
+            }
+        }
+
+    }
+    &__info {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    @include xs{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 45px;
+    }
+    @include xxs{
+        margin-top: 8px;
+        flex-direction: row;
+        column-gap: 30px;
+    }
+}
+    &__info-social{
+        .social-icon{
+            width: 29px;
+            height: 28px;
+        }
+        svg{
+            stroke: $main-color;
+            fill: $light-color;
+            transition: stroke 0.3s, fill 0.3s;
+        }
+        svg:hover {
+            stroke: $light-color;
+            fill: $main-color;
+        }
+        @include xs {
+            order: -1;
+            margin-bottom: 94px;
+        }
+        @include xxs{
+            margin-bottom: 0;
+            order: 0;
+        }
+    }
+    &__info-copyright,
+    &__info-agreement {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 130%;
+        margin-bottom: 10px;
+        @include xxs{
+            font-size: 12px;
+        }
+    }
+}

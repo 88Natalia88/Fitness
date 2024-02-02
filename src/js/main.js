@@ -2,6 +2,52 @@ window.addEventListener('DOMContentLoaded', () => {
   
 });
 
+const menu = document.querySelector('.header__menu')
+const menuBtn = document.querySelector('.header__burger-icon')
+
+const body = document.body;
+
+if (menu && menuBtn) {
+	menuBtn.addEventListener('click', e => {
+		menu.classList.toggle('active')
+		menuBtn.classList.toggle('active')
+		body.classList.toggle('locked')
+	})
+
+	menu.addEventListener('click', e => {
+		if (e.target.classList.contains('header__menu')) {
+			menu.classList.remove('active')
+			menuBtn.classList.remove('active')
+			body.classList.remove('locked')
+		}
+	})
+
+	menu.querySelectorAll('.menu-item').forEach(link => {
+		link.addEventListener('click', () => {
+			menu.classList.remove('active')
+			menuBtn.classList.remove('active')
+			body.classList.remove('locked')
+		})
+	})
+}
+
+/*===========================================*/
+
+const anchors = document.querySelectorAll('a[href*="#"]');
+
+anchors.forEach(anchor => {
+	anchor.addEventListener('click', event => {
+		event.preventDefault();
+
+		const blockID = anchor.getAttribute('href').substring(1);
+
+		document.getElementById(blockID).scrollIntoView({
+			behavior: 'smooth',
+			block: 'start'
+		})
+	})
+})
+
 const pictures = document.querySelectorAll('.author__info-study picture');
 //console.log(pictures);
 pictures.forEach(picture => {

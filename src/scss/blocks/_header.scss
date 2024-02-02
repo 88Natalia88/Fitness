@@ -1,6 +1,7 @@
 .header {
     height: 80px;
     background: linear-gradient(to bottom, #00000092, #00000000), $main-color;
+    position: relative;
     @include xxs{
         height: 72px;
     }
@@ -9,7 +10,8 @@
         justify-content: space-between;
         align-items: center;
     }
-    &__menu{
+
+    &__menu {
         margin-top: 2%;
         margin-right: 10%;
         z-index: 10;
@@ -17,26 +19,73 @@
             margin-right: 5%;
         }
         @include xs{
-            display: none;
+            //display: none;
+            position: absolute;
+            top: 0;
+            left: -100%;
+            height: 100vh;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            -webkit-transition: all 0.2s;
+            transition: all 0.2s;
+            -moz-transition: all 0.2s;
+            -ms-transition: all 0.2s;
+            -o-transition: all 0.2s;
         }
-        .menu-list{
+        .menu-list {
+            list-style-type: none;
+            display: -webkit-box;
+            display: -ms-flexbox;
+
             display: flex;
             column-gap: 20px;
+            @include xs{
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                padding: 30px;
+                gap: 0;
+                height: 100%;
+                //height: 0%;
+                width: 60%;
+                background-color: #B291D4;
+                overflow: auto;
+            }
+            @include xxs{
+                width: 85%;
+            }
             .menu-item {
                 animation: 1s anim-lineUp ease-out;
                 -webkit-animation: 1s anim-lineUp ease-out;
-                a{
+                a {
                     cursor: pointer;
                     color: $light-color;
                     font-size: 16px;
                     font-weight: 400;
                     line-height: 130%;
+                    @include xs{
+                        display: block;
+                        font-size: 30px;
+                        line-height: 70px;
+                    }
+                }
+                a:hover:after{
+                    @include xs{
+                        width: 0;
+                    }
                 }
             }
         }
-        
     }
-    &__logo{
+    &__menu.active {
+        @include xs {
+            left: 0;
+            margin-top: 0;
+            margin-right: 0;
+        }
+    }
+    &__logo {
         margin-top: 2%;
         margin-left: 10%;
         animation: 0.5s anim-lineUp ease-out;
@@ -48,48 +97,73 @@
             margin-top: 5%;
         }
     }
-    &__burger-icon {
-        margin-right: 2%;
-        width: auto;
-        height: auto;
-        font-size: 24px;
-        font-weight: normal;
-        line-height: normal;
-        text-transform: none;
-        //border: none;
-        border-radius: 0;
-        color: $light-color;
-        //background-color: transparent;
-        cursor: pointer;
-        position: relative;
-        animation: none;
+
+    &__burger-icon{
         display: none;
-        padding: 0;
-        z-index: 0;
-        transition: none;
-        will-change: none;
-        animation: 0.5s anim-lineUp ease-out;
-        -webkit-animation: 0.5s anim-lineUp ease-out;
-        button{
-            color: $light-color;
-        }
         @include xs{
             display: block;
+            width: 18px;
+            height: 16px;
+            position: relative;
+            z-index: 50;
+            cursor: pointer;
+            margin-right: 2%;
+            
+            span{
+                position: absolute;
+                top: calc(50% - 1px);
+                left: 0;
+                width: 100%;
+                height: 2px;
+                border-radius: 10px;
+                -webkit-border-radius: 10px;
+                -moz-border-radius: 10px;
+                -ms-border-radius: 10px;
+                -o-border-radius: 10px;
+                background-color: $light-color;
+                -webkit-transition: all 0.2s;
+                transition: all 0.2s;
+                -moz-transition: all 0.2s;
+                -ms-transition: all 0.2s;
+                -o-transition: all 0.2s;
+                &:first-child{
+                    top: 0;
+                }
+                &:last-child{
+                    top: auto;
+                    bottom: 0;
+                }
+            }
         }
-        ::after {
-            display: none;
-        }
-        :hover::after {
-            display: none;
-        }
-        :hover {
-            border: none;
-            color: $main-color;
-            transform: none;
-            will-change: none;
+    }
+
+    &__burger-icon.active span{
+        @include xs{
+            -webkit-transform: scale(0);
+                transform: scale(0);
+                -moz-transform: scale(0);
+                -ms-transform: scale(0);
+                -o-transform: scale(0);
+                &:first-child{
+                    -webkit-transform: rotate(-45deg);
+                    transform: rotate(-45deg);
+                    top: calc(50% - 1px);
+                    -moz-transform: rotate(-45deg);
+                    -ms-transform: rotate(-45deg);
+                    -o-transform: rotate(-45deg);
+                }
+                &:last-child{
+                    -webkit-transform: rotate(45deg);
+                    transform: rotate(45deg);
+                    bottom: calc(50% - 1px);
+                    -moz-transform: rotate(45deg);
+                    -ms-transform: rotate(45deg);
+                    -o-transform: rotate(45deg);
+                }
         }
     }
 }
+
 @keyframes anim-lineUp {
     0% {
         opacity: 0;
@@ -110,3 +184,4 @@
         transform: translateY(0%);
     }
 }
+

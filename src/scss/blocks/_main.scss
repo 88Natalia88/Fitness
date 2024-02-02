@@ -4,75 +4,43 @@
     background-color: $main-color;
     position: relative;
     padding-bottom:  70px;
-    
-    //display: flex;
-    @include md{
-        //min-height: 74vh;
-    }
-    @include sm{
-        
-        //height: 86.5vh;
-    }
     @include xs{
-        //height: 189vh;
         padding-bottom: 0;
-        display: flex;
-        flex-direction: column;
-    }
-    @include xxs{
-        //height: 158vh;
     }
     .container{
         display: flex;
         @include xs{
-            //height: 189vh;
             padding-bottom: 0;
             display: flex;
             flex-direction: column;
         }
     }
     &__picture{
-        //position: relative;
         @include xs{
             position: relative;
         }
         .picture-author{
             max-width: 791px;
-            //height: 683px;
-
             img{
-                /*max-width: 100%;
-                max-height: 100%;*/
                 height: calc(100% + 70px);
-                //width: 100%;
-                //height: 100%;
                 object-fit: fill;
                 position: absolute;
                 right: 0;
                 top: -13%;
                 z-index: 2;
                 @include sm{
-                    //width: 744px;
-                    //height: 610px;
                     top: -15%;
                 }
                 @include xs{
                     position: relative;
                     height: 70%;
-                    //height: auto;
                     bottom: 0;
                     top: 0;
                     left: 0;
-
-                }
-                @include xxs{
-                    //width: 400px;
-                    //height: 350px;
                 }
             }
         }
         .picture-diamond{
-            //position: relative;
             img{
                 max-width: 400px;
                 max-height: 450px;
@@ -103,7 +71,6 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        //align-items: start;
         color: $light-color;
         @include xs{
             width: 100%;
@@ -211,7 +178,6 @@
         color: $main-color;
         background-color: $light-color;
         border-radius: 60px;
-        //border: 2px solid currentColor;
         overflow: hidden;
         position: relative;
         transition: .3s transform ease-in-out;
@@ -261,18 +227,6 @@
         will-change: transform;
     }
 }
-
-/*@media screen and (max-width: 460px) {
-    .first-page{
-        height: 140vh;
-    }
-}
-
-@media screen and (max-width: 376px) {
-    .first-page{
-        height: 131vh;
-    }
-}*/
 
 .question{
     position: relative;
@@ -1144,87 +1098,6 @@
                 height: 40px;
                 font-size: 12px;
             }
-        }
-    }
-}
-.footer {
-    height: 280px;
-    background-color: $main-color;
-    color: $light-color;
-    a:hover:after{
-        width: 0;
-    }
-    @include xs{
-        height: 427px;
-    }
-    @include xxs{
-        height: 97px;
-    }
-    &__logo {
-        text-align: center;
-        img {
-            margin-top: 90px;
-            @include xxs{
-                width: 57px;
-                height: 17px;
-                margin-top: 15px;
-            }
-        }
-
-    }
-    &__info {
-    margin-top: 60px;
-    display: flex;
-    justify-content: space-between;
-    @include xs{
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-top: 45px;
-    }
-    @include xxs{
-        margin-top: 8px;
-        flex-direction: row;
-        column-gap: 30px;
-        //justify-content: space-between;
-    }
-}
-    &__info-social{
-        .social-icon{
-            width: 29px;
-            height: 28px;
-            /*#instagram{
-                width: 100%;
-                height: 100%;
-            }*/
-        }
-        svg{
-            stroke: $main-color;
-            fill: $light-color;
-            transition: stroke 0.3s, fill 0.3s;
-        }
-        svg:hover {
-            stroke: $light-color;
-            fill: $main-color;
-        }
-        @include xs {
-            order: -1;
-            margin-bottom: 94px;
-        }
-        @include xxs{
-            margin-bottom: 0;
-            order: 0;
-        }
-    }
-    &__info-copyright,
-    &__info-agreement {
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 130%;
-        margin-bottom: 10px;
-        @include xxs{
-            font-size: 12px;
         }
     }
 }

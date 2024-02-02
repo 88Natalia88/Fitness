@@ -26,10 +26,10 @@ body {
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
     &.locked {
-        overflow: hidden
+        overflow: hidden;
     }
     @include sm {
-        font-size: 16px
+        font-size: 16px;
     }
         
 }
