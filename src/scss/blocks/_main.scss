@@ -22,6 +22,7 @@
     @include xxs{
         height: 138vh;
     }
+    
     &__picture{
         //position: relative;
         @include xs{
@@ -243,6 +244,11 @@
         will-change: transform;
     }
 }
+@media screen and (max-width: 376px) {
+    .first-page{
+        height: 131vh;
+    }
+}
 
 .question{
     position: relative;
@@ -296,40 +302,36 @@
         background-color: rgba(0,0,0,0.4);
         line-height: 1.5;
         }
-        .popup-close{
-            float: right;
-            color: $light-color;
-            font-size: 30px;
-            width: 20px;
-            height: 20px;
-            padding-right: 30px;
-            cursor: pointer;
-        }
-        .popup{
-            text-align: center;
-            //background-color: #fefefe;
-            margin: 10% auto;
-            //padding: 10px;
-            border-radius: 5px;
-            //border: 1px solid #888;
-            width: 280px;
-            height: 200px;
-            -webkit-border-radius: 5px;
-            -moz-border-radius: 5px;
-            -ms-border-radius: 5px;
-            -o-border-radius: 5px;
-        }
-        .popup-title{
-            color: $light-color;
-            font-size: 18px;
-            font-weight: 400;
-            line-height: normal;
-            padding-top: 60px;
-            width: 100%;
-            max-width: 212px;
-            margin: 0 auto;
-            //text-align: center;
-        }
+    .popup-close{
+        float: right;
+        color: $light-color;
+        font-size: 30px;
+        width: 20px;
+        height: 20px;
+        padding-right: 30px;
+        cursor: pointer;
+    }
+    .popup{
+        text-align: center;
+        margin: 10% auto;
+        border-radius: 5px;
+        width: 280px;
+        height: 200px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+    }
+    .popup-title{
+        color: $light-color;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: normal;
+        padding-top: 60px;
+        width: 100%;
+        max-width: 212px;
+        margin: 0 auto;
+    }
     .left-70{
         @include sm{
             transform: translateX(50%);
@@ -432,6 +434,12 @@
                 height: 260px;
             }
         }
+    }
+}
+
+@media  screen and (max-width: 376px) {
+    .booking__wrap{
+        left: 10%;
     }
 }
 
