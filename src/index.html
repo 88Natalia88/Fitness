@@ -38,11 +38,10 @@
                         </li>
                     </ul>
                 </nav>
-                <div class="header__burger-icon">
-                <!------<button class="burger-icon">☰</button>---->    
-                <span></span>
-                <span></span>
-                <span></span>
+                <div class="header__burger-icon">    
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
             </div>
     </header>
@@ -461,6 +460,19 @@
             </div>
             
         </footer>
+        <div class="modal">
+            <div class="modal__popup">
+                <div class="circle-blue"></div>
+                <div class="circle-pink"></div>
+                <div class="modal__popup-close">&times;</div>
+                <form class="modal__popup-form">
+                    <input type="text" name="name" id="name" required placeholder="Введите ваше имя">
+                    <input type="email" name="email" id="email" required placeholder="Введите вашу эл. почту">
+                    <input type="tel" name="tel" id="tel" required placeholder="Введите ваш телефон">
+                    <button id="btn-submit">Отправить</button>
+                </form>
+            </div>
+        </div>
     </main>
     <script src="js/main.min.js"></script>
 </body>
