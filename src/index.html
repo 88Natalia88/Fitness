@@ -465,12 +465,30 @@
                 <div class="circle-blue"></div>
                 <div class="circle-pink"></div>
                 <div class="modal__popup-close">&times;</div>
+                <div class="modal__popup-title section-title">
+                    <h2>Форма обратной связи</h2>
+                </div>
+                <div class="modal__popup-text">
+                    <p>После заполнения формы, я:</p>
+                    <ul class="modal__popup-list">
+                        <li>свяжусь с Вами удобным для Вас способом (оставьте комментарий в разделе "примечание")</li>
+                        <li>подготовлю ответы на интересующие Вас вопросы (так же можно написать их в разделе "примечание")</li>
+                    </ul>
+                </div>
                 <form class="modal__popup-form">
-                    <input type="text" name="name" id="name" required placeholder="Введите ваше имя">
-                    <input type="email" name="email" id="email" required placeholder="Введите вашу эл. почту">
-                    <input type="tel" name="tel" id="tel" required placeholder="Введите ваш телефон">
+                    <input type="text" name="name" id="user-name" required placeholder="Введите ваше имя">
+                    <input type="email" name="email" id="user-email" required placeholder="Введите вашу эл. почту">
+                    <input type="tel" name="tel" id="user-tel" required placeholder="Введите ваш телефон">
+                    <input type="text" name="telegram" id="telegram" required placeholder="Введите ваш ник в телеграмм">
+                    <textarea name="note" id="user-note" placeholder="Примечание:"></textarea>
                     <button id="btn-submit">Отправить</button>
                 </form>
+                <div class="modal__popup-info">
+                    <p>
+                        Нажимая "Отправить", вы подтверждаете, что ознакомились с <a href="#contra">Противопоказаниями</a>
+                        и согласны <a href="https://10.rkn.gov.ru/docs/10/Pravila_obrabotki_PD.pdf">на обработку персональных данных</a> 
+                    </p>
+                </div>
             </div>
         </div>
     </main>

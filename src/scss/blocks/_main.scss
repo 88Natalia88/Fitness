@@ -1117,7 +1117,7 @@
         background-color: #fff;
         width: 80%;
         max-width: 600px;
-        margin: 10% auto;
+        margin: 2% auto;
         padding: 20px;
         border-radius: 15px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -1127,6 +1127,31 @@
         -o-border-radius: 15px;
         position: relative;
         overflow: hidden;
+    }
+    &__popup-title{
+        padding-top: 10px;
+        padding-bottom: 25px;
+        text-align: center;
+    }
+    &__popup-text{
+        width: 100%;
+        max-width: 488px;
+        margin: 0 auto;
+        padding-bottom: 15px;
+        p{
+            font-family: $bold;
+        }
+    }
+    &__popup-list li::before{
+        content: '\2714 ';
+        color: #1AB934;
+        margin-right: 6px;
+    }
+    &__popup-list li{
+        margin-bottom: 8px;
+        :last-child{
+            margin-bottom: 0;
+        }
     }
     .circle-blue{
         width: 50vw;
@@ -1148,7 +1173,7 @@
         position: absolute;
         top: 0;
         right: 2%;
-        font-size: 30px;
+        font-size: 50px;
         color: $main-color;
         cursor: pointer;
         transition: transform 0.3s;
@@ -1187,6 +1212,22 @@
         input::placeholder{
             padding-left: 15px;
             font-family: $regular;
+        }
+        textarea{
+            width: 488px;
+            height: 100px;
+            font-size: 20px;
+            border: 2px solid $main-color;
+            outline: none;
+            border-radius: 15px;
+            -webkit-border-radius: 15px;
+            -moz-border-radius: 15px;
+            -ms-border-radius: 15px;
+            -o-border-radius: 15px;
+            background: transparent;
+        }
+        textarea::placeholder{
+            padding: 15px;
         }
         #btn-submit{
             width: 300px;
@@ -1236,6 +1277,13 @@
             color: $main-color;
             transform: scale(1.05);
             will-change: transform;
+        }
+    }
+    &__popup-info{
+        padding-top: 20px;
+        text-align: center;
+        a{
+            color: #B291D4;
         }
     }
 }
