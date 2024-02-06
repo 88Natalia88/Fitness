@@ -1,6 +1,20 @@
 window.addEventListener('DOMContentLoaded', () => {
   
 });
+const formBtns = document.querySelectorAll('.show-form');
+const modal = document.querySelector('.modal');
+const modalClose = document.querySelector('.modal__popup-close');
+formBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    modal.style.display = 'block';
+    modal.style.zIndex = '50';
+    body.classList.add('locked');
+  });
+});
+modalClose.addEventListener('click', () => {
+  modal.style.display = 'none';
+  body.classList.remove('locked');
+})
 
 const menu = document.querySelector('.header__menu')
 const menuBtn = document.querySelector('.header__burger-icon')
