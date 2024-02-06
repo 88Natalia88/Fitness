@@ -38,11 +38,10 @@
                         </li>
                     </ul>
                 </nav>
-                <div class="header__burger-icon">
-                <!------<button class="burger-icon">☰</button>---->    
-                <span></span>
-                <span></span>
-                <span></span>
+                <div class="header__burger-icon">    
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
             </div>
     </header>
@@ -68,7 +67,7 @@
                     
                     <div class="first-page__action">
                     <div class=" first-page__button">
-                        <button>Открыть путь</button>
+                        <button class="show-form">Открыть путь</button>
                     </div>
                     <p>
                         Один клик, и ты найдешь СВОЙ путь к телу мечты
@@ -129,7 +128,7 @@
                             а к занятиям приступить через полгода после родов</p>
                     </div>
                     <div class="booking__button">
-                        <button class="main-button">
+                        <button class="main-button show-form">
                             бронирую!
                         </button>
                     </div>
@@ -195,7 +194,7 @@
                         </picture>
                     </div>
                     <div class="course__button">
-                        <button class="main-button">ГОТОВА НАЧАТЬ!</button>
+                        <button class="main-button show-form">ГОТОВА НАЧАТЬ!</button>
                     </div>
                 </div>
             </div>
@@ -234,7 +233,7 @@
                     </div>
                 </div>
                 <div class="info__button">
-                    <button class="main-button">стартую!</button>
+                    <button class="main-button show-form">стартую!</button>
                 </div>
             </div>
             
@@ -433,7 +432,7 @@
                         <p>На курсе очень комфортно, жду вас за результатом!</p>
                     </div>
                     <div class="slogan__button">
-                        <button class="main-button">ХОЧУ НА КУРС</button>
+                        <button class="main-button show-form">ХОЧУ НА КУРС</button>
                     </div>
                 </div>
             </div>
@@ -461,6 +460,37 @@
             </div>
             
         </footer>
+        <div class="modal">
+            <div class="modal__popup">
+                <div class="circle-blue"></div>
+                <div class="circle-pink"></div>
+                <div class="modal__popup-close">&times;</div>
+                <div class="modal__popup-title section-title">
+                    <h2>Форма обратной связи</h2>
+                </div>
+                <div class="modal__popup-text">
+                    <p>После заполнения формы, я:</p>
+                    <ul class="modal__popup-list">
+                        <li>свяжусь с Вами, удобным для Вас способом (оставьте комментарий в разделе "примечание")</li>
+                        <li>подготовлю ответы на интересующие Вас вопросы (так же можно написать их в разделе "примечание")</li>
+                    </ul>
+                </div>
+                <form class="modal__popup-form">
+                    <input type="text" name="name" id="user-name" required placeholder="Введите ваше имя">
+                    <input type="email" name="email" id="user-email" required placeholder="Введите вашу эл. почту">
+                    <input type="tel" name="tel" id="user-tel" required placeholder="Введите ваш телефон">
+                    <input type="text" name="telegram" id="telegram" required placeholder="Введите ваш ник в телеграмм">
+                    <textarea name="note" id="user-note" placeholder="Примечание:"></textarea>
+                    <button id="btn-submit">Отправить</button>
+                </form>
+                <div class="modal__popup-info">
+                    <p>
+                        Нажимая "Отправить", вы подтверждаете, что ознакомились с <a href="#contra">Противопоказаниями</a>
+                        и согласны <a href="https://10.rkn.gov.ru/docs/10/Pravila_obrabotki_PD.pdf">на обработку персональных данных</a> 
+                    </p>
+                </div>
+            </div>
+        </div>
     </main>
     <script src="js/main.min.js"></script>
 </body>
