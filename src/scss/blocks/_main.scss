@@ -2,44 +2,39 @@
     width: 100%;
     height: fit-content;
     background-color: $main-color;
-    position: relative;
-    padding-bottom:  70px;
-    @include xs{
-        padding-bottom: 0;
-    }
-    .container{
-        display: flex;
-        @include xs{
-            padding-bottom: 0;
-            display: flex;
-            flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+        @media (max-width: 920px) {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(2, auto);
         }
-    }
     &__picture{
-        @include xs{
-            position: relative;
+        position: relative;
+        top: -80px;
+        height: calc(100% + 80px);
+        grid-column: 2;
+        justify-self: end;
+        @media (max-width: 920px){
+            grid-column: 1;
+            grid-row: 2;
+            top: 0;
+            height: 100%;
         }
         .picture-author{
-            max-width: 791px;
-            img{
-                height: calc(100% + 70px);
-                object-fit: fill;
-                position: absolute;
-                right: 0;
-                top: -13%;
+                height: 100%;
+                width: 100%;
                 z-index: 2;
-                @include sm{
-                    top: -15%;
-                }
-                @include xs{
-                    position: relative;
-                    //height: 70%;
+            img{
+                position: relative;
+                height: 100%;
+                width: 100%;
+                object-fit: fill;
+                z-index: 2;
+                @media (max-width: 920px){
                     height: auto;
-                    bottom: 0;
-                    top: 0;
-                    left: 0;
                 }
-            }
+            }   
         }
         .picture-diamond{
             img{
@@ -48,15 +43,16 @@
                 object-fit: fill;
                 position: absolute;
                 z-index: 1;
-                top: 70px;
-                right: 8%;
+                top: 15%;
+                right: 16%;
                 @include sm{
                     max-width: 341px;
                     max-height: 376px;
                     top: -80px;
                     right: 0;
                 }
-                @include xs{
+                
+                @media (max-width: 920px){
                     bottom: 0;
                     top: 0;
                 }
@@ -67,17 +63,20 @@
             }
         }
     }
-    
     &__wrap{
+        grid-column: 1;
+        justify-self: end;
         display: flex;
         flex-direction: column;
         justify-content: center;
         color: $light-color;
-        @include xs{
-            width: 100%;
-            max-width: 514px;
-            margin: 0 auto;
-            
+        width: 100%;
+        max-width: 555px;
+        //margin: 0 auto;
+        padding: 0 20px;
+        @media (max-width: 920px){
+            grid-row: 1;
+            justify-self: center;
         }
     }
     &__info{
@@ -96,17 +95,14 @@
         font-family: $italic;
         font-weight: 500;
         line-height: 133.5%;
-        width: 555px;
         animation: 4s anim-lineUp ease-out;
         @include sm{
             font-size: 49px;
         }
-        @include xs{
-            font-size: 59px;
-        }
+        
         @include xxs{
             font-size: 30px;
-            width: 300px;
+            max-width: 300px;
             margin-top: 26px;
         }
     }
@@ -117,7 +113,7 @@
         line-height: 135%;
         font-variant: small-caps;
         animation: 4s anim-lineUp ease-out;
-        @include xs{
+        @media (max-width: 1000px){
             display: flex;
             justify-content: center;
             align-items: center;
@@ -143,7 +139,7 @@
     }
     &__action{
         margin-top: 70px;
-        @include xs{
+        @media (max-width: 1000px){
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -154,14 +150,13 @@
         }
         p{
             margin-top: 10px;
-            margin-left: 5%;
+            margin-left: 2%;
+            padding-bottom: 30px;
             animation: 6s anim-lineUp ease-out;
             @include sm{
                 margin-left: 0;
-                width: 268px;
-                text-align: center;
             }
-            @include xs{
+            @media (max-width: 1000px){
                 margin-bottom: 10px;
             }
             @include xxs{
@@ -190,7 +185,7 @@
             height: 80px;
             font-size: 22px;
         }
-        @include xs{
+        @media (max-width: 1000px){
             width: 488px;
             height: 100px;
             font-size: 26px;
@@ -462,15 +457,16 @@
         justify-content: center;
         align-items: center;
         text-align: center;
-        width: 357px;
+        width: 100%;
+        max-width: 357px;
         height: 88px;
         border-radius: 70px;
         border: 1px solid $dark-color;
         @include sm{
-            width: 342px;
+            max-width: 342px;
         }
         @include xxs{
-            width: 150px;
+            max-width: 150px;
             height: 40px;
         }
         p{
@@ -1110,7 +1106,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный цвет для тени */
+    background-color: rgba(0, 0, 0, 0.5);
     display: none;
     &__popup{
         z-index: -2;
@@ -1199,6 +1195,9 @@
         justify-content: center;
         align-items: center;
         row-gap: 35px;
+        @include xxs{
+            row-gap: 20px;
+        }
         input{
             width: 100%;
             max-width: 488px;

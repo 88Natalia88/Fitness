@@ -1,9 +1,11 @@
-window.addEventListener('DOMContentLoaded', () => {
-  
-});
+//modal
 const formBtns = document.querySelectorAll('.show-form');
 const modal = document.querySelector('.modal');
 const modalClose = document.querySelector('.modal__popup-close');
+const contra = document.querySelector('.modal__popup-info a');
+
+const body = document.body;
+
 formBtns.forEach(btn => {
   btn.addEventListener('click', () => {
     modal.style.display = 'block';
@@ -14,38 +16,42 @@ formBtns.forEach(btn => {
 modalClose.addEventListener('click', () => {
   modal.style.display = 'none';
   body.classList.remove('locked');
-})
+});
+contra.addEventListener('click', () => {
+  modal.style.display = 'none';
+  body.classList.remove('locked');
+});
 
-const menu = document.querySelector('.header__menu')
-const menuBtn = document.querySelector('.header__burger-icon')
 
-const body = document.body;
+//burger
+const menu = document.querySelector('.header__menu');
+const menuBtn = document.querySelector('.header__burger-icon');
 
 if (menu && menuBtn) {
 	menuBtn.addEventListener('click', e => {
-		menu.classList.toggle('active')
-		menuBtn.classList.toggle('active')
-		body.classList.toggle('locked')
-	})
+		menu.classList.toggle('active');
+		menuBtn.classList.toggle('active');
+		body.classList.toggle('locked');
+	});
 
 	menu.addEventListener('click', e => {
 		if (e.target.classList.contains('header__menu')) {
-			menu.classList.remove('active')
-			menuBtn.classList.remove('active')
-			body.classList.remove('locked')
+			menu.classList.remove('active');
+			menuBtn.classList.remove('active');
+			body.classList.remove('locked');
 		}
-	})
+	});
 
 	menu.querySelectorAll('.menu-item').forEach(link => {
 		link.addEventListener('click', () => {
-			menu.classList.remove('active')
-			menuBtn.classList.remove('active')
-			body.classList.remove('locked')
-		})
-	})
-}
+			menu.classList.remove('active');
+			menuBtn.classList.remove('active');
+			body.classList.remove('locked');
+		});
+	});
+};
 
-/*===========================================*/
+//плавный скролл
 
 const anchors = document.querySelectorAll('a[href*="#"]');
 
@@ -62,8 +68,10 @@ anchors.forEach(anchor => {
 	})
 })
 
+
+//section author увеличение фотографий
 const pictures = document.querySelectorAll('.author__info-study picture');
-//console.log(pictures);
+
 pictures.forEach(picture => {
   picture.addEventListener('click', event => {
     if (picture.hasAttribute('style')) {
@@ -81,7 +89,7 @@ document.addEventListener('click', () => {
   });
 });
 
-
+//section question
 const yes = document.getElementById('yes');
 const no = document.getElementById('no');
 const close = document.querySelector('.popup-close');
@@ -102,6 +110,7 @@ close.addEventListener('click', function () {
     document.querySelector('.overlay').style.display = 'none';
 });
 
+//section countdown
 const countdownDate = new Date("2024-12-31T23:59:59").getTime();
 const updateCountdown = setInterval(() => {
   const now = new Date().getTime();
