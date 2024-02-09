@@ -1,8 +1,21 @@
+window.addEventListener('DOMContentLoaded', () => {
+  //submitForm();
+})
+
 //modal
 const formBtns = document.querySelectorAll('.show-form');
 const modal = document.querySelector('.modal');
 const modalClose = document.querySelector('.modal__popup-close');
 const contra = document.querySelector('.modal__popup-info a');
+const modalBtn = document.getElementById('btn-submit');
+const userName = document.getElementById('user-name');
+const userEmail = document.getElementById('user-email');
+const tel = document.getElementById('user-tel');
+const errors = document.querySelectorAll('.error');
+const userTelegram = document.getElementById('telegram');
+const note = document.getElementById('user-note');
+const regEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+//console.log(modalBtn)
 
 const body = document.body;
 
@@ -11,17 +24,100 @@ formBtns.forEach(btn => {
     modal.style.display = 'block';
     modal.style.zIndex = '50';
     body.classList.add('locked');
+    modalBtn.setAttribute('disabled', '');
+    modalBtn.style.cssText = 'opacity: 0.5; cursor: not-allowed;';
   });
 });
 modalClose.addEventListener('click', () => {
   modal.style.display = 'none';
   body.classList.remove('locked');
+  tel.value = '';
+  userName.value = '';
+  userEmail.value = '';
+  userTelegram.value = '';
+  note.value = '';
+  tel.placeholder = 'Введите ваш телефон';
+  errors.forEach(error => {
+    error.innerHTML = '';
+  });
+
 });
 contra.addEventListener('click', () => {
   modal.style.display = 'none';
   body.classList.remove('locked');
 });
 
+//добавление маскированного ввода телефона
+tel.addEventListener('focus', addMaskNumber);
+
+function addMaskNumber() {
+    tel.placeholder = '+7 (___) ___-__-__';
+
+    tel.addEventListener('input', () => {
+        const phone = tel.value.replace(/\D/g, '');
+        let formattedPhone = '';
+        
+        if (phone.length > 0) {
+            formattedPhone += '+' + phone.substring(0, 1) + '(';
+        }
+    
+        if (phone.length > 1) {
+            formattedPhone += phone.substring(1, 4);
+        }
+
+        if (phone.length > 4) {
+            formattedPhone += ')' + phone.substring(4, 7);
+        }
+
+        if (phone.length > 7) {
+            formattedPhone += '-' + phone.substring(7, 9);
+        }
+        
+        if (phone.length > 9) {
+            formattedPhone += '-' + phone.substring(9, 11);
+        }
+        tel.value = formattedPhone;
+    });
+
+    tel.addEventListener('keyup', (event) => {
+        const phoneAdd = tel.value;
+        if (phoneAdd === '+7(' && event.key === 'Backspace') {
+            tel.value = '';
+        }
+    });
+};
+
+
+function submitForm(){
+    //данные введенные в инпутах
+    let nameAdd = userName.value;
+    let emailAdd = userEmail.value;
+
+errors.forEach((error, i) => {
+    error.innerHTML = '';
+
+    if(nameAdd === '' && i === 0){
+        error.innerHTML = "* Введите Ваше имя";
+    }
+
+    if(emailAdd === '' && i === 1){
+        error.innerHTML = "* Введите ваш e-mail";
+    } else if (emailAdd !== '' && i === 1 && !regEmail.test(emailAdd)){
+        error.innerHTML = "* Введите корректный e-mail";
+    }
+  });
+
+  if (nameAdd && emailAdd) {
+    modalBtn.removeAttribute('disabled');
+    modalBtn.style.cssText = 'opacity: 1; cursor: pointer;';
+  } else {
+    modalBtn.setAttribute('disabled', 'disabled');
+    modalBtn.style.cssText = 'opacity: 0.5; cursor: not-allowed;';
+  }
+}
+// Добавить слушатели событий для полей ввода
+userName.addEventListener('input', submitForm);
+userEmail.addEventListener('input', submitForm);
 
 //burger
 const menu = document.querySelector('.header__menu');

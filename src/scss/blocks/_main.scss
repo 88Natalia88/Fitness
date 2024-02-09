@@ -1142,7 +1142,7 @@
         content: '\2714 ';
         color: #1AB934;
         margin-right: 6px;
-    }
+}
     &__popup-list li{
         margin-bottom: 8px;
         :last-child{
@@ -1195,8 +1195,20 @@
         justify-content: center;
         align-items: center;
         row-gap: 35px;
+        
         @include xxs{
             row-gap: 20px;
+        }
+        .input{
+            position: relative;
+            width: 100%;
+            max-width: 488px;
+            margin: 0 auto;
+        }
+        .error{
+            color: #FA0E0E;
+            position: absolute;
+            margin-left: 5%;
         }
         input{
             width: 100%;
@@ -1262,6 +1274,10 @@
             -ms-border-radius: 60px;
             -o-border-radius: 60px;
         }
+        /*#btn-submit:disabled {
+            opacity: 0.5; /* Пример стиля для выключенной кнопки */
+            //cursor: not-allowed; /* Изменяем курсор для выключенной кнопки */
+        //}
         #btn-submit::after {
             background-color: $light-color;
             border-radius: 3rem;

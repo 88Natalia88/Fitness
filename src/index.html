@@ -477,8 +477,14 @@
                     </ul>
                 </div>
                 <form class="modal__popup-form">
-                    <input type="text" name="name" id="user-name" required placeholder="Введите ваше имя">
-                    <input type="email" name="email" id="user-email" required placeholder="Введите вашу эл. почту">
+                    <div class="input">
+                        <p class="error"></p>
+                        <input type="text" name="name" id="user-name" required placeholder="Введите ваше имя">
+                    </div>
+                    <div class="input">
+                        <p class="error"></p>
+                        <input type="email" name="email" id="user-email" required placeholder="Введите вашу эл. почту">
+                    </div>
                     <input type="tel" name="tel" id="user-tel" placeholder="Введите ваш телефон">
                     <input type="text" name="telegram" id="telegram" placeholder="Введите ваш ник в телеграмм">
                     <textarea name="note" id="user-note" placeholder="Примечание:"></textarea>
