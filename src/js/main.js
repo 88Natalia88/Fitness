@@ -51,14 +51,16 @@ contra.addEventListener('click', () => {
 tel.addEventListener('focus', addMaskNumber);
 
 function addMaskNumber() {
-    tel.placeholder = '+7 (___) ___-__-__';
-
+    //tel.placeholder = '+7 (___) ___-__-__';
+    if (tel.value === '') {
+      tel.value = '+7';
+    }
     tel.addEventListener('input', () => {
         const phone = tel.value.replace(/\D/g, '');
         let formattedPhone = '';
         
         if (phone.length > 0) {
-            formattedPhone += '+' + phone.substring(0, 1) + '(';
+            formattedPhone += '+' + phone.substring(0, 1) + ' ';
         }
     
         if (phone.length > 1) {
@@ -66,7 +68,7 @@ function addMaskNumber() {
         }
 
         if (phone.length > 4) {
-            formattedPhone += ')' + phone.substring(4, 7);
+            formattedPhone += ' ' + phone.substring(4, 7);
         }
 
         if (phone.length > 7) {
@@ -80,10 +82,10 @@ function addMaskNumber() {
     });
 
     tel.addEventListener('keyup', (event) => {
-        const phoneAdd = tel.value;
-        if (phoneAdd === '+7(' && event.key === 'Backspace') {
-            tel.value = '';
-        }
+      if (event.key === 'Backspace') {
+        let currentValue = tel.value;
+        tel.value = currentValue.slice(0, -1);
+      }
     });
 };
 
