@@ -6,12 +6,12 @@ window.addEventListener('DOMContentLoaded', () => {
 const formBtns = document.querySelectorAll('.show-form');
 const modal = document.querySelector('.modal');
 const modalClose = document.querySelector('.modal__popup-close');
-const contra = document.querySelector('.modal__popup-info a');
+const contra = document.querySelector('.modal__popup-link');
 const modalBtn = document.getElementById('btn-submit');
 const userName = document.getElementById('user-name');
 const userEmail = document.getElementById('user-email');
 const tel = document.getElementById('user-tel');
-const errors = document.querySelectorAll('.error');
+const errors = document.querySelectorAll('.form__error');
 const userTelegram = document.getElementById('telegram');
 const note = document.getElementById('user-note');
 const regEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -90,7 +90,7 @@ function addMaskNumber() {
 };
 
 
-function submitForm(){
+function validationForm(){
     //данные введенные в инпутах
     let nameAdd = userName.value;
     let emailAdd = userEmail.value;
@@ -116,10 +116,12 @@ errors.forEach((error, i) => {
     modalBtn.setAttribute('disabled', 'disabled');
     modalBtn.style.cssText = 'opacity: 0.5; cursor: not-allowed;';
   }
+
+
 }
 // Добавить слушатели событий для полей ввода
-userName.addEventListener('input', submitForm);
-userEmail.addEventListener('input', submitForm);
+userName.addEventListener('input', validationForm);
+userEmail.addEventListener('input', validationForm);
 
 //burger
 const menu = document.querySelector('.header__menu');
@@ -140,7 +142,7 @@ if (menu && menuBtn) {
 		}
 	});
 
-	menu.querySelectorAll('.menu-item').forEach(link => {
+	menu.querySelectorAll('.header__menu-item').forEach(link => {
 		link.addEventListener('click', () => {
 			menu.classList.remove('active');
 			menuBtn.classList.remove('active');
